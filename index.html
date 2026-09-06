@@ -9,7 +9,7 @@
 
     <header>
         <h1>FixIt</h1>
-        <p>Report and track issues easily.</p>
+        <p>From Breakdowns to Breakthroughs</p>
     </header>
 
     <main>
@@ -50,17 +50,25 @@
 
                 <br><br>
 
-                <button type="button">Submit Issue</button>
+                <button id="submit-button" type="button">Submit Issue</button>
             </div>
         </section>
 
     </main>
     <script>
-        const button = document.querySelector("button");
+        const reportbutton = document.querySelector("button");
         const form = document.querySelector("#report-form");
-        button.addEventListener("click", function() {
-            form.style.display = "block";
-        });
+        const submitButton = document.querySelector("#submit-button");
+        reportbutton.addEventListener("click", function() {
+            form.style.display = "block";});
+        submitButton.addEventListener("click", function() {
+            const email = document.querySelector("#reporter-email").value;
+            const problemType = document.querySelector("#problem-type").value;
+            const description = document.querySelector("#description").value;
+
+            console.log(email);
+            console.log(problemType);
+            console.log(description);});
     </script>
 </body>
 </html>
