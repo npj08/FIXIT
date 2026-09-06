@@ -1,1 +1,6 @@
 body {background-color:lightgrey;}
+header{
+    text-align: center;
+    backgroung-color: white;
+    padding 20px;
+}
