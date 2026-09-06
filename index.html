@@ -21,7 +21,7 @@
 
         <section class="report-section">
             <h2>Report an Issue</h2>
-            <button type="button">Report an Issue</button>
+            <button id="reportbutton" type="button">Report an Issue</button>
             <div id="report-form">
                 <h3>Report a Problem</h3>
 
@@ -56,7 +56,7 @@
 
     </main>
     <script>
-        const reportbutton = document.querySelector("button");
+        const reportbutton = document.querySelector("reportbutton");
         const form = document.querySelector("#report-form");
         const submitButton = document.querySelector("#submit-button");
         reportbutton.addEventListener("click", function() {
