@@ -17,6 +17,7 @@
         <section class="issues-section">
             <h2>Recent Issues</h2>
             <p>View and track reported problems.</p>
+            <div id="issue-list"></div>
         </section>
 
         <section class="report-section">
@@ -43,6 +44,10 @@
                 </select>
 
                 <br><br>
+                <label for="location">Location of the problem:</label>
+                <br>
+                <input id="location" placeholder="Location">
+                <br><br>
 
                 <label for="description">Description:</label>
                 <br>
@@ -65,7 +70,7 @@
             const email = document.querySelector("#reporter-email").value;
             const problemType = document.querySelector("#problem-type").value;
             const description = document.querySelector("#description").value;
-
+            const location = document.querySelector("#location").value;
             console.log(email);
             console.log(problemType);
             console.log(description);});
