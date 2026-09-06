@@ -25,11 +25,25 @@
             <div id="report-form">
                 <h3>Report a Problem</h3>
 
-                <input type="text" placeholder="Issue title">
+                <label for="reporter-email">Reporter Mail ID:</label>
+                <input type="email" id="reporter-email" placeholder="Enter your mail ID">
 
                 <br><br>
 
-                <textarea placeholder="Describe the issue"></textarea>
+                <label for="problem-type">Type of Problem:</label>
+                <select id="problem-type">
+                    <option value="">Choose a problem</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="cleaning">Cleaning</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <br><br>
+
+                <label for="description">Description:</label>
+                <textarea id="description" placeholder="Describe the problem"></textarea>
 
                 <br><br>
 
