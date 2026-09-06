@@ -61,6 +61,7 @@
 
     </main>
     <script>
+        const issueList = document.querySelector("#issue-list");
         const reportbutton = document.querySelector("#reportbutton");
         const form = document.querySelector("#report-form");
         const submitButton = document.querySelector("#submit-button");
@@ -71,9 +72,11 @@
             const problemType = document.querySelector("#problem-type").value;
             const description = document.querySelector("#description").value;
             const location = document.querySelector("#location").value;
-            console.log(email);
-            console.log(problemType);
-            console.log(description);});
+            
+            const issueCard = document.createElement("div");
+            issueCard.textContent = email + " - " + problemType + " - " + location + " - " + description;
+            issueList.appendChild(issueCard);
+        });
     </script>
 </body>
 </html>
