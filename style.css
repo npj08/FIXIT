@@ -24,3 +24,6 @@ button {
     border-radius: 5px;
 }
 #report-form {display: none;}
+input,
+textarea,
+select {width: 300px;}
