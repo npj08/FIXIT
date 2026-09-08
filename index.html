@@ -76,6 +76,12 @@
             const issueCard = document.createElement("div");
             issueCard.textContent = email + " - " + problemType + " - " + location + " - " + description;
             issueList.appendChild(issueCard);
+
+            document.querySelector("#reporter-email").value = "";
+            document.querySelector("#problem-type").value = "";
+            document.querySelector("#location").value = "";
+            document.querySelector("#description").value = "";
+            form.style.display = "none";
         });
     </script>
 </body>
