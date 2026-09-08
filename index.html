@@ -65,6 +65,7 @@
         const reportbutton = document.querySelector("#reportbutton");
         const form = document.querySelector("#report-form");
         const submitButton = document.querySelector("#submit-button");
+        let issueCount = 1;
         reportbutton.addEventListener("click", function() {
             form.style.display = "block";});
         submitButton.addEventListener("click", function() {
@@ -72,16 +73,26 @@
             const problemType = document.querySelector("#problem-type").value;
             const description = document.querySelector("#description").value;
             const location = document.querySelector("#location").value;
+
+            if (
+                email === "" ||
+                problemType === "" ||
+                location === "" ||
+                description === ""
+            ) {alert("Please fill all the fields."); return;}
             
             const issueCard = document.createElement("div");
             issueCard.className = "issue-card";
             issueCard.innerHTML = `
+                <h3>Issue #${issueCount}</h3>
                 <p><strong>Reporter:</strong> ${email}</p>
                 <p><strong>Problem:</strong> ${problemType}</p>
                 <p><strong>Location:</strong> ${location}</p>
                 <p><strong>Description:</strong> ${description}</p>
+                <p><strong>Status:</strong> <span class="status">Reported</span></p>
             `;
-            issueList.appendChild(issueCard);
+            issueList.prepend(issueCard);
+            issueCount++;
 
             document.querySelector("#reporter-email").value = "";
             document.querySelector("#problem-type").value = "";

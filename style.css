@@ -38,3 +38,11 @@ select {width: 300px;}
 .issue-card p {
     margin: 5px 0;
 }
+
+.status {
+    background-color: orange;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 14px;
+}
