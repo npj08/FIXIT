@@ -65,6 +65,11 @@
         const reportbutton = document.querySelector("#reportbutton");
         const form = document.querySelector("#report-form");
         const submitButton = document.querySelector("#submit-button");
+        function clearForm() {
+            document.querySelector("#reporter-email").value = "";
+            document.querySelector("#problem-type").value = "";
+            document.querySelector("#location").value = "";
+            document.querySelector("#description").value = "";}
         let issueCount = 1;
         reportbutton.addEventListener("click", function() {
             form.style.display = "block";});
@@ -114,10 +119,7 @@
             issueList.prepend(issueCard);
             issueCount++;
 
-            document.querySelector("#reporter-email").value = "";
-            document.querySelector("#problem-type").value = "";
-            document.querySelector("#location").value = "";
-            document.querySelector("#description").value = "";
+            clearform();
             form.style.display = "none";
         });
     </script>
