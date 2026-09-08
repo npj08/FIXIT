@@ -74,7 +74,13 @@
             const location = document.querySelector("#location").value;
             
             const issueCard = document.createElement("div");
-            issueCard.textContent = email + " - " + problemType + " - " + location + " - " + description;
+            issueCard.className = "issue-card";
+            issueCard.innerHTML = `
+                <p><strong>Reporter:</strong> ${email}</p>
+                <p><strong>Problem:</strong> ${problemType}</p>
+                <p><strong>Location:</strong> ${location}</p>
+                <p><strong>Description:</strong> ${description}</p>
+            `;
             issueList.appendChild(issueCard);
 
             document.querySelector("#reporter-email").value = "";

@@ -27,3 +27,14 @@ button {
 input,
 textarea,
 select {width: 300px;}
+
+.issue-card {
+    background-color: #444;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.issue-card p {
+    margin: 5px 0;
+}
