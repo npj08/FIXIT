@@ -80,6 +80,9 @@
                 location === "" ||
                 description === ""
             ) {alert("Please fill all the fields."); return;}
+            if (!email.includes("@")) {
+                alert("Please enter a valid email.");
+                return;}
             
             const issueCard = document.createElement("div");
             issueCard.className = "issue-card";
@@ -90,11 +93,24 @@
                 <p><strong>Location:</strong> ${location}</p>
                 <p><strong>Description:</strong> ${description}</p>
                 <p><strong>Status:</strong> <span class="status">Reported</span></p>
+                <button class="status-btn">Change Status</button>
                 <button class="delete-btn">Delete</button>
             `;
             const deleteButton = issueCard.querySelector(".delete-btn");
             deleteButton.addEventListener("click", function() {
                 issueCard.remove();});
+            const statusButton = issueCard.querySelector(".status-btn");
+            const status = issueCard.querySelector(".status");
+
+            statusButton.addEventListener("click", function() {
+                if (status.textContent === "Reported") {
+                    status.textContent = "In Progress";
+                } else if (status.textContent === "In Progress") {
+                    status.textContent = "Resolved";
+                } else {
+                    status.textContent = "Reported";
+                }
+            });
             issueList.prepend(issueCard);
             issueCount++;
 
