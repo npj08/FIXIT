@@ -90,7 +90,11 @@
                 <p><strong>Location:</strong> ${location}</p>
                 <p><strong>Description:</strong> ${description}</p>
                 <p><strong>Status:</strong> <span class="status">Reported</span></p>
+                <button class="delete-btn">Delete</button>
             `;
+            const deleteButton = issueCard.querySelector(".delete-btn");
+            deleteButton.addEventListener("click", function() {
+                issueCard.remove();});
             issueList.prepend(issueCard);
             issueCount++;
 

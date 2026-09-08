@@ -46,3 +46,16 @@ select {width: 300px;}
     border-radius: 20px;
     font-size: 14px;
 }
+
+.delete-btn {
+    background-color: #f25252;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #b71c1c;
+}
