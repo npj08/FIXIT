@@ -7,7 +7,20 @@ function IssueCard(props) {
       <p><strong>Problem:</strong> {props.problem}</p>
       <p><strong>Location:</strong> {props.location}</p>
       <p><strong>Description:</strong> {props.description}</p>
-      <p><strong>Status:</strong> {props.status}</p>
+      <p>
+        <strong>Status:</strong>{" "}
+        <span className="status">{props.status}</span>
+      </p>
+
+      <button onClick={() => props.changeStatus(props.number)}>
+        Change Status
+      </button>
+      <button
+  className="delete-btn"
+  onClick={() => props.deleteIssue(props.number)}
+>
+  Delete
+</button>
     </div>
   );
 }

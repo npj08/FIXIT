@@ -16,6 +16,8 @@ function IssueList(props) {
             location={issue.location}
             description={issue.description}
             status={issue.status}
+            changeStatus={props.changeStatus}
+            deleteIssue={props.deleteIssue}
           />
         );
       })}
