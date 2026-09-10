@@ -46,15 +46,61 @@ function App() {
 useEffect(function () {
   localStorage.setItem("fixitIssues", JSON.stringify(issues));
 }, [issues]);
-  return (
-    <>
-      <Header />
-      <main>
-      <IssueList issues={issues} changeStatus={changeStatus} deleteIssue={deleteIssue}/>
-      <ReportForm addIssue={addIssue} issueCount={issues.length + 1} />
-      </main>
-    </>
-  );
+
+return (
+  <>
+    <Header />
+
+    <main>
+      <section className="about-section">
+        <h2>About FixIt</h2>
+        <p>
+          FixIt is a campus maintenance reporting platform that helps students
+          report infrastructure issues quickly and track their progress until
+          they are resolved.
+        </p>
+
+        <ul className="about-list">
+          <li>Report campus maintenance issues in one place.</li>
+          <li>Track issue progress from Reported to Resolved.</li>
+          <li>Simple, organized, and easy for everyone to use.</li>
+        </ul>
+      </section>
+
+      <section className="how-section">
+        <h2>How It Works</h2>
+
+        <div className="steps">
+          <div className="step">
+            <h3>1. Report</h3>
+            <p>Submit the issue with its type, location, and description.</p>
+          </div>
+
+          <div className="step">
+            <h3>2. Track</h3>
+            <p>View the issue instantly in the Recent Issues section.</p>
+          </div>
+
+          <div className="step">
+            <h3>3. Resolve</h3>
+            <p>Update the status until the issue is marked as resolved.</p>
+          </div>
+        </div>
+      </section>
+
+      <IssueList
+        issues={issues}
+        changeStatus={changeStatus}
+        deleteIssue={deleteIssue}
+      />
+
+      <ReportForm
+        addIssue={addIssue}
+        issueCount={issues.length + 1}
+      />
+    </main>
+  </>
+);
 }
 
 export default App;

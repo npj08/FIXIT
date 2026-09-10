@@ -7,7 +7,7 @@ function IssueList(props) {
       <p>View and track reported problems.</p>
 
       {props.issues.length === 0 && (
-        <p>No issues have been reported yet.</p>
+        <p className="no-issues"><strong>No issues have been reported yet.</strong></p>
       )}
 
       {props.issues.map(function(issue) {
