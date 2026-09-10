@@ -39,7 +39,7 @@ function ReportForm(props) {
       <h2>Report an Issue</h2>
 
       <button onClick={() => setShowForm(true)}>
-        Report an Issue
+        Report
       </button>
 
       {showForm && (
@@ -94,7 +94,7 @@ function ReportForm(props) {
           />
 
           <button onClick={handleSubmit}>
-            Submit Issue
+            Submit
           </button>
         </>
       )}

@@ -26,7 +26,12 @@ button {
 #report-form {display: none;}
 input,
 textarea,
-select {width: 300px;}
+select {width: 300px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+}
 
 .issue-card {
     background-color: #8b0db6;
@@ -37,6 +42,7 @@ select {width: 300px;}
 
 .issue-card p {
     margin: 5px 0;
+    overflow-wrap: break-word;
 }
 
 .status {
@@ -107,4 +113,19 @@ select {width: 300px;}
 
 .step h3 {
     margin-top: 0;
+}
+
+.contact-section p {
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #115196;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
 }

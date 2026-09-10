@@ -98,7 +98,28 @@ return (
         addIssue={addIssue}
         issueCount={issues.length + 1}
       />
+
+      <section className="contact-section">
+        <h2>Contact Us</h2>
+        <p>
+          For further assistance regarding reported issues, please contact the
+          campus maintenance team.
+        </p>
+
+        <p>
+          <strong>Email:</strong> maintenanceemail@vit.ac.in
+        </p>
+
+        <p>
+          <strong>Office:</strong> Maintenance Office, Admin block
+        </p>
+      </section>
+      
     </main>
+    <footer>
+      <p>© 2026 FixIt |  VIT CHENNAI</p>
+      <p>From Breakdowns to Breakthroughs</p>
+    </footer>
   </>
 );
 }
