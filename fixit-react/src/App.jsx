@@ -1,19 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import IssueList from "./components/IssueList";
 import ReportForm from "./components/ReportForm";
 
 function App() {
-  const [issues, setIssues] = useState([
-    {
-      number: 1,
-      email: "demo@college.ac.in",
-      problem: "Electrical",
-      location: "Lab A",
-      description: "Light is not working.",
-      status: "Reported"
-    }
-  ]);
+  const [issues, setIssues] = useState(function () {
+    const savedIssues = localStorage.getItem("fixitIssues");
+
+    if (savedIssues) {
+      return JSON.parse(savedIssues);}
+
+    return [];
+  });
 
   function addIssue(newIssue) {
     setIssues([newIssue, ...issues]);
@@ -45,6 +43,9 @@ function App() {
   setIssues(updatedIssues);
 }
 
+useEffect(function () {
+  localStorage.setItem("fixitIssues", JSON.stringify(issues));
+}, [issues]);
   return (
     <>
       <Header />

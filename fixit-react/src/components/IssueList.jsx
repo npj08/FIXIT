@@ -6,6 +6,10 @@ function IssueList(props) {
       <h2>Recent Issues</h2>
       <p>View and track reported problems.</p>
 
+      {props.issues.length === 0 && (
+        <p>No issues have been reported yet.</p>
+      )}
+
       {props.issues.map(function(issue) {
         return (
           <IssueCard
